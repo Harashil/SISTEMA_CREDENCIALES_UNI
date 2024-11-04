@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Asignacion extends Model
 {
-    protected $table = 'asignacions';
+    protected $table = 'asignaciones';
     protected $guarded = ['id'];
     
     public function empleado()

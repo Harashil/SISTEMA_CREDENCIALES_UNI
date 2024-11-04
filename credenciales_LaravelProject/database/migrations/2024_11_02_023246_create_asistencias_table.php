@@ -11,24 +11,25 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('turnos', function (Blueprint $table) {
+        Schema::create('asistencias', function (Blueprint $table) {
             $table->id();
-            $table->time('hora');
+            $table->unsignedBigInteger('empleado_id'); //PARA ANGULAR
+            $table->enum('asistencia', ['presente', 'ausente', 'tarde', 'justificado']);//PARA ANGULAR
+            $table->enum('reg_tareas', ['cumplido', 'no cumplido', 'parcial']);//PARA ANGULAR
+            $table->unsignedBigInteger('turno_id'); ;//PARA ANGULAR
             $table->date('fecha');
-            $table->decimal('importe', 8, 2);
-            $table->unsignedBigInteger('empleado_id');  
+            $table->time('hora_entrada');//PARA ANGULAR 
             $table->timestamps();
             // Clave foránea hacia la tabla empleados
             $table->foreign('empleado_id')->references('id')->on('empleados')->onDelete('cascade');
             $table->foreign('turno_id')->references('id')->on('turnos')->onDelete('cascade');
         });
     }
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('turnos');
+        Schema::dropIfExists('asistencias');
     }
 };

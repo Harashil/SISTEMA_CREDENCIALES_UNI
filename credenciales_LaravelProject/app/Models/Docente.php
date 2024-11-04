@@ -13,4 +13,6 @@ class Docente extends Model
     {
         return $this->belongsTo(Sector::class);
     }
+
+    
 }

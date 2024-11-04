@@ -8,4 +8,5 @@ class Aula extends Model
 {
     protected $table = 'aulas';
     protected $guarded = ['id'];
+    
 }
