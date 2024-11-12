@@ -1,0 +1,17 @@
+button{
+    border:none;
+    padding: .9rem;
+    color: #818181;
+    background-color: transparent;
+    font-family: 'Mulish', sans-serif;
+    font-size: .85rem;
+    font-weight: bold   ;
+    width: 100%;
+    cursor: pointer;
+    transition: .1s;
+    border-radius: .8rem;
+}
+button:hover{
+    background-color: #fae3e0;
+    transform: scale(1.1);
+}   
