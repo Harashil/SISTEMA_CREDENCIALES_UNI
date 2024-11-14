@@ -1,0 +1,45 @@
+.perfil-section{
+    display: flex;    
+}
+.perfil {
+    width: 3.25rem;              /* Tamaño del botón */
+    height: 3.25rem;
+    border-radius: 50%;        /* Hace el botón circular */        /* Oculta las partes de la imagen que sobresalen */
+    padding: 0;              /* Remueve el borde predeterminado del botón */
+    cursor: pointer;
+    border: none;
+    margin-left:2rem;
+    display: flex;             /* Centra la imagen dentro del botón */
+    align-items: center;
+    justify-content: center; /* Fondo transparente si es necesario */
+  }
+  .usuario{
+    box-shadow: .1rem 0 .3rem rgb(52, 52, 52);
+    overflow: hidden;       
+  }
+  .notificacion{
+    position: relative;
+    padding:.9rem;
+    background-color: rgb(10, 10, 10);
+  }
+  .indice {
+    position: absolute;
+    top: 0; /* Posiciona el badge en la esquina superior derecha */
+    right: 0;
+    background-color: red; /* Color de fondo del círculo */
+    color: white; /* Color del texto */
+    font-size: 0.75rem;
+    width: 1.25rem; /* Tamaño del círculo */
+    height: 1.25rem;
+    border-radius: 50%; /* Hace el círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* Hace el número más legible */
+  }
+  button img {
+    width: 100%;               /* Asegura que la imagen ocupe todo el botón */
+    height: 100%;
+    object-fit: cover;         /* Recorta y ajusta la imagen sin deformarla */
+  }
+  

@@ -1,20 +1,27 @@
 app-barra-lateral{
     position : fixed;
     height: 100%;
-    width: 13%;
-    background-color: #FFFFFF;
+    width: 14%;
+    padding-top: 1rem;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
 
 }
 app-encabezado{
     position:fixed;
     right:0;
-    height: 10%;
-    width: 90%;
-    background-color: #FFFFFF;
+    height: 12%;
+    width: 86%;
+    box-sizing: border-box;
+    background-color: #FFFCF8;
     display: flex;
-    justify-content: space-between;
+   justify-content: space-between;
     align-items: center;
+    padding: 1rem 3rem 1rem 3rem;
+    font-family: 'Mulish', sans-serif;
+    
 }

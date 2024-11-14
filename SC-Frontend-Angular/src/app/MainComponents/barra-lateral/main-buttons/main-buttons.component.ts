@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class MainButtonsComponent {
   @Input() label: string = 'Inicio';
+  @Input() iconRoute: string = '';
 }
