@@ -1,7 +1,17 @@
-app-barra-lateral{
-    position : fixed;
+.main-content{
     height: 100%;
-    width: 14%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 14% auto;
+    grid-template-rows: 14% auto;
+    grid-template-areas: 
+    "barra-lateral encabezado"
+    "barra-lateral contenido";
+}
+app-barra-lateral{
+    position : sticky;
+    top:0;
+    grid-area: barra-lateral;
     padding-top: 1rem;
     background-color: white;
     display: flex;
@@ -12,10 +22,9 @@ app-barra-lateral{
 
 }
 app-encabezado{
-    position:fixed;
-    right:0;
-    height: 12%;
-    width: 86%;
+    position:sticky;
+    top: 0;
+    grid-area: encabezado;
     box-sizing: border-box;
     background-color: #FFFCF8;
     display: flex;
@@ -24,4 +33,11 @@ app-encabezado{
     padding: 1rem 3rem 1rem 3rem;
     font-family: 'Mulish', sans-serif;
     
+}
+app-dashboard{
+    flex-direction: column;
+}
+.variable-content{
+    display: flex;
+    grid-area: contenido;
 }

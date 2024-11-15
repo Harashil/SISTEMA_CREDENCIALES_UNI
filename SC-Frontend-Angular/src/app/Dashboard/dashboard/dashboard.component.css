@@ -1,0 +1,13 @@
+.aligment{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #d52222;
+    width: 100%;
+    height: 50%;
+}
+#myChart{
+    height: 10px;
+}
