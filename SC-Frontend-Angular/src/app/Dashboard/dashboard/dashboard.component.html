@@ -1,13 +1,8 @@
 <div class="aligment first">
-    <section class="aplicants">
-        <canvas id="myChart" width="400" height="400">
-
-        </canvas>
-    </section>
-    <section class="forecast"></section>
+        <app-grafico [config]="BarGraphic" id="applicants"> </app-grafico>
+        <app-grafico [config]="PieGraphic" id="forecast"> </app-grafico>
 </div>
 <div class="aligment second">
-    <section class="emplooyes"></section>
-    <section class="unrecognized"></section>
+        <app-grafico [config]="DounughtGraphic" id="emplooyes"> </app-grafico>
 </div>
 

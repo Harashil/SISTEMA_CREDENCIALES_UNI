@@ -2,12 +2,27 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    gap: 2rem;
     align-items: center;
-    padding: 1rem;
-    border: 1px solid #d52222;
     width: 100%;
     height: 50%;
+    box-sizing: border-box;
 }
-#myChart{
-    height: 10px;
+.second{
+    margin-top: 1rem;
+}
+#applicants{
+    flex: 0 0 55%;
+}
+#forecast{
+    flex: 1;
+}
+app-grafico{
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }

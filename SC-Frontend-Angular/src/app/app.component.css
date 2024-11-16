@@ -2,8 +2,8 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 14% auto;
-    grid-template-rows: 14% auto;
+    grid-template-columns: 14% 86%;
+    grid-template-rows: 14% 86%;
     grid-template-areas: 
     "barra-lateral encabezado"
     "barra-lateral contenido";
@@ -36,6 +36,7 @@ app-encabezado{
 }
 app-dashboard{
     flex-direction: column;
+    padding: 2rem 2rem 3rem 2rem;
 }
 .variable-content{
     display: flex;
