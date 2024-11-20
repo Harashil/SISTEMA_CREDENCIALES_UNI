@@ -1,4 +1,6 @@
-
+a {
+    text-decoration: none;
+}
 .lateral-nav{
     color: #818181;
     align-items: center;

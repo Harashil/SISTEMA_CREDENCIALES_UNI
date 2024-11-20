@@ -15,7 +15,7 @@ export class DashboardComponent {
   BarGraphic = {
     type: 'bar', // Tipo de gráfico (barras, línea, etc.)
     data: {
-      labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'], // Etiquetas para el eje X
+      labels: ['Lunes-28/10', 'Martes-29/10', 'Miercoles-30/10', 'Jueves-31/10', 'Viernes-01/11', 'Sábado-02/11', 'Domingo-02/11'], // Etiquetas para el eje X
       datasets: [{
         label: 'Numero de Postulantes', // Nombre de la serie
         data: [12, 19, 3, 5, 2, 3, 7], // Datos a graficar
@@ -25,6 +25,8 @@ export class DashboardComponent {
       }]
     },
     options: {
+      responsive: true, // Mantiene el gráfico responsivo
+      maintainAspectRatio: true,
       plugins: {
         datalabels: false,
         legend: {
@@ -41,7 +43,19 @@ export class DashboardComponent {
         bar: {
           borderRadius: 5, // Aplica bordes redondeados
         }
-      }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          categoryPercentage: 0, // Ajusta este valor según tus necesidades
+          barPercentage: 0,
+          ticks: {
+            font: {
+              size: 11, // Cambia el tamaño de las etiquetas en el eje X
+            },
+          }// Si tienes múltiples datasets, ajusta este valor
+        }
+      } 
     }
   };
   DounughtGraphic = {
@@ -89,7 +103,7 @@ export class DashboardComponent {
   PieGraphic = {
     type: 'pie',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green'],
+      labels: ['P. Administrativo:', 'P. Directivo', 'Sectores', 'P. Académico'],
       datasets: [{
         label: 'My Dataset',
         data: [300, 50, 100, 40],
@@ -106,7 +120,7 @@ export class DashboardComponent {
           position: 'right'
         },
         tooltip: {
-          enabled: false // Mostrar información al pasar el mouse
+          enabled: false,
         },
         datalabels: {
           formatter: (value:any, context:any) => {
@@ -114,7 +128,7 @@ export class DashboardComponent {
             const percentage = ((value / total) * 100).toFixed(1);
             return `${percentage}%`; // Muestra el porcentaje
           },
-          color: '#545454', // Color de las etiquetas
+          color: 'black', // Color de las etiquetas
           font: {
             weight: 'bold',
             size: 13

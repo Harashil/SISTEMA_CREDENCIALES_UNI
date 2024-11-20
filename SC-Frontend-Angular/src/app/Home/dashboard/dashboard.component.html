@@ -1,0 +1,28 @@
+<div id="dashboardComponent">
+<div class="aligment first">
+        <section class="graphicSection applicants">
+                <app-grafico [config]="BarGraphic" id="applicants"></app-grafico>
+                <div>
+                        <img src="dashboard/applicant.png" style="height: 37%;"/>
+                        <p style="padding: 0;margin-top:.2rem;text-align: center; color: #525452; font-size: .75rem; font-weight: bold; font-family:'Mulish', sans-serif;">Total de Postulantes:<br><p style="padding: 0;font-size: 1.2rem; font-weight: bolder;margin-top: .4rem; color: rgb(164, 86, 43);"> 1630</p></p>
+                </div>
+        </section>
+        <section class="graphicSection forecast" style="background-color: #fef5ff;">
+                <div>
+                        <p style="margin-left:20%; font-size: 1.2rem; color: rgb(85, 84, 84);">PRONÓSTICO REALIZADO</p>
+                        <button style="transition:0.2s;background-color: black; color: white; border: none; padding: 10px 20px; font-size: 0.700rem;font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; border-radius: 4px; height: 60%;">
+                                <span style="display: inline-flex; justify-content: center; align-items: center; background-color: white; color: black; border-radius: 50%; width: 0.875rem; height: 0.875rem; font-weight: bold;">
+                                  !
+                                </span>
+                                Ver más
+                        </button>
+                </div>
+                <app-grafico  [config]="PieGraphic" id="forecast" > </app-grafico>
+                <p style="padding-left: 1rem;font-size: 1.1rem; display: flex; align-items: center;color: #624a80;">Personal necesario: 450 </p>
+        </section>
+</div>
+<div class="aligment second">
+        <app-grafico class= 'graphicSection emplooyes' [config]="DounughtGraphic" id="emplooyes"> </app-grafico>
+</div>
+</div>
+

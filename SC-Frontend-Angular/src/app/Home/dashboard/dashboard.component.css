@@ -1,0 +1,90 @@
+#dashboardComponent{
+    padding: 2rem 2rem 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 86vh;
+    width: 100%;
+}
+.aligment{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+}
+.first{
+    flex:0 0 55%;
+}
+.second{
+    height:45%;
+    justify-content: space-around;
+       
+}
+.applicants{
+    flex: 0 0 55%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-right: 1rem;
+}
+.applicants>div{
+    flex: 0 0 15%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 230, 230);
+    margin:auto ;
+    
+    padding: .5rem;
+    border-radius: 1rem;
+ 
+}
+#applicants{
+    flex: 0 0 75%;
+}
+.forecast{
+    flex: 1;
+    padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Mulish', sans-serif;
+    justify-content: space-between;
+}
+.forecast>div{
+    height:12%;
+    display: flex;
+    justify-content: space-between;	
+}
+.forecast>div button:hover{
+    transform: scale(1.05);
+
+}
+.forecast p{
+    height:12%; 
+    font-weight: bolder;
+    
+}
+#forecast{
+    height: 70%;
+    padding: 0 15% 0 15%;
+}
+    
+#emplooyes{
+    padding: 2rem;
+    height: 90%;
+}
+.graphicSection{
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+}

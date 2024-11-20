@@ -1,3 +1,4 @@
+
 .main-content{
     height: 100%;
     width: 100%;
@@ -34,11 +35,10 @@ app-encabezado{
     font-family: 'Mulish', sans-serif;
     
 }
-app-dashboard{
-    flex-direction: column;
-    padding: 2rem 2rem 3rem 2rem;
-}
-.variable-content{
+
+:host ::ng-deep router-outlet + * {
     display: flex;
     grid-area: contenido;
 }
+    
+  

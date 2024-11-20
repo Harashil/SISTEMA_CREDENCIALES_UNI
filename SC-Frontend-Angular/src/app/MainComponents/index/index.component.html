@@ -1,0 +1,12 @@
+<div>
+    <nav class="indicador">
+      <a 
+        *ngFor="let item of tabs"
+        [routerLink]="item.path"
+        [ngClass]="{ 'active': activeTab === item.path }">
+        {{ item.label }}
+      </a>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+  

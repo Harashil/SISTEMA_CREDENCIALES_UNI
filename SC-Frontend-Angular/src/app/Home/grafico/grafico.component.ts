@@ -9,7 +9,7 @@ Chart.register(ChartDataLabels);
   standalone: true,
   imports: [],
   templateUrl: './grafico.component.html',
-styles: []
+styleUrls: ['./grafico.component.css']
 })
 export class GraficoComponent implements OnInit {
   @Input() config: any; // Recibe la configuración completa del gráfico
