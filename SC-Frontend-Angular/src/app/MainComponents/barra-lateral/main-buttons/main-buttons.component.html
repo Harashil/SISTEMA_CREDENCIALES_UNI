@@ -1,4 +1,56 @@
-<button>
-    <img src="{{iconRoute}}" />
-    {{label}}
+<button class="mainButton" [ngClass]="{ active: isActive }" routerLink="{{routeIdentificator}}" >
+  <img
+    id="buttonIcon"
+    [ngClass]="{ activeIcon: isActive }"
+    src="{{ iconRoute }}"
+  />
+  {{ label }}
+  <span
+    *ngIf="label === 'Gestionar entidades'"
+    id="desplegarButton"
+    class="dropdown-container"
+    (click)="click()"
+    (mouseenter)="startHover()"
+    (mouseleave)="stopHover()"
+    style="
+      margin-top: 0.1rem;
+      margin-left: 1.2rem;
+      width: 0.85rem;
+      height: 0.9rem;
+      background: none;
+      border: none;
+      transition: 0.2s;
+    "
+  >
+    <img
+      style="width: 100%; height: 100%; cursor: pointer"
+      src="barra-lateral/desplegar.png"
+    />
+    <ul *ngIf="showOptions" class="dropdown-options">
+      <li (click)="preventDefault($event)">
+        <a routerLink="/gestionar-entidades/empleados" routerLinkActive="active">Empleados</a>
+      </li>
+
+      <li (click)="preventDefault($event)">
+        <a routerLink="/gestionar-entidades/docentes" routerLinkActive="active"
+          >Docentes</a>
+      </li>
+
+      <li (click)="preventDefault($event)">
+        <a routerLink="/gestionar-entidades/sectores" routerLinkActive="active">Sectores</a>
+      </li>
+      <li (click)="preventDefault($event)">
+        <a routerLink="/gestionar-entidades/pabellones" routerLinkActive="active">Pabellones</a>
+      </li>
+      <li (click)="preventDefault($event)">
+        <a routerLink="/gestionar-entidades/aulas" routerLinkActive="active">Aulas</a>
+      </li>
+      <li (click)="preventDefault($event)">
+        <a routerLink="/gestionar-entidades/asignaciones" routerLinkActive="active">Asignaciones</a>
+      </li>
+      <li (click)="preventDefault($event)">
+        <a routerLink="/gestionar-entidades/pagos" routerLinkActive="active">Pagos</a>
+      </li>
+    </ul>
+  </span>
 </button>

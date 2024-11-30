@@ -1,13 +1,47 @@
-<table *ngIf="data && data.length > 0">
+<section class="table">
+  <!-- Tabla dinámica -->
+  <table>
     <thead>
       <tr>
-        <th *ngFor="let column of columns">{{ column }}</th>
+        <th *ngFor="let column of columns" [ngClass]="{'assistance-column': code === '1', 'activity-column': code === '2'}">{{ column }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let row of data">
+      <tr *ngFor="let row of paginatedData">
         <td *ngFor="let column of columns">{{ row[column] }}</td>
       </tr>
     </tbody>
   </table>
-  <p *ngIf="!data || data.length === 0">No hay datos disponibles</p>
+
+  <!-- Controles de Paginación -->
+  <div class="pagination-controls">
+    <button class="pagination-button"
+      (click)="changePage(currentPage - 1)" 
+      [disabled]="currentPage === 1">
+      <img src="/table/next-back.png" style="transform: rotate(180deg); " alt="Anterior" />
+    </button>
+    <span>Página {{ currentPage }} de {{ totalPages }}</span>
+    <button class="pagination-button"
+      (click)="changePage(currentPage + 1)" 
+      [disabled]="currentPage === totalPages">
+      <img src="/table/next-back.png" alt="Anterior" />
+    </button>
+    <button class="goBackHome-controlls"
+      (click)="changePage(1)" 
+      [disabled]="currentPage === 1">
+      Ir al inicio
+    </button>
+    <button class="goBackHome-controlls"
+      (click)="changePage(totalPages)" 
+      [disabled]="currentPage === totalPages">
+      Ir al final
+    </button>
+    <select  #rowSelect (change)="setDynamicRows(rowSelect.value)">
+      <option [value]="NumRowsService.dynamicRows[newRoute]">{{NumRowsService.dynamicRows[newRoute]}}</option>
+      <option *ngIf="toInt(5)" value="5">5</option>
+      <option *ngIf="toInt(3)" value="3">3</option>
+      <option *ngIf="toInt(1)" value="1">1</option>
+  </select>
+  </div>
+</section>
+

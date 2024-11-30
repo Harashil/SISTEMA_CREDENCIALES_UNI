@@ -1,0 +1,78 @@
+section{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    border: #555555 1px solid;
+    width: auto;
+    padding-right: 0.938rem;
+    border-radius: .5rem ;
+    position: relative;
+    font-family:  'Roboto', sans-serif;
+  }
+  .search-container button{
+    border: none;        /* Elimina el borde */
+    background: none; 
+  }
+  .search-container button img{
+    height: 1.1rem; /* Ajusta la altura */
+    width: 1.1rem;
+  }
+  /*
+  .search-container::after {
+    content: '';
+    background-color: rgba(224, 131, 23, 0.938);
+    width: 80%;
+    height: 0.094rem;
+    position: absolute;
+    bottom: 0.25rem;
+    left: 1.25rem;
+    
+  }*/
+  .filterBy{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    padding: 0.3rem;
+    padding-right: 0.8rem;
+    font-size: .85rem;
+    height: 100%;
+  }
+  input {
+    all: unset;
+    font-size: .85rem;
+    width: 5rem;
+    margin: 0 .2rem 0 .4rem;
+  }
+  
+  #select1 {
+    all: unset; /* Mantiene la flecha nativa */
+    width: auto;
+    font-weight: 600;
+  }
+
+#xd{
+  appearance: none; /* Soportado en navegadores modernos */
+  -webkit-appearance: none; /* Para navegadores WebKit */
+  -moz-appearance: none; /* Para Firefox */
+  
+  /* Estilo personalizado */
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 8px 30px 8px 10px; /* Espacio para la flecha */
+  
+  /* Mantener la flecha */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+#xd:focus{
+  outline: none;
+}

@@ -1,13 +1,14 @@
 
     <img src="barra-lateral/sistema-logo.jpg" alt="Logo" class="logo" />
+    
     <nav class="lateral-nav">
         <ul>
-            <li><a routerLink="" RouterLinkActive="active"><app-main-buttons label="Inicio" iconRoute="barra-lateral/hogar.png"></app-main-buttons></a></li>
-            <li><a routerLink="/gestionar-entidades" RouterLinkActive="active"><app-main-buttons label="Gestionar entidades" iconRoute="barra-lateral/entidades.png"></app-main-buttons></a></li>
-            <li><a routerLink="/asistencia-y-turnos"><app-main-buttons label="Asistencia y Turnos" iconRoute="barra-lateral/asistencia.png"></app-main-buttons></a></li>
-            <li><a routerLink="/reportes-y-credenciales"><app-main-buttons label="Reportes y credenciales" iconRoute="barra-lateral/reportes.png"></app-main-buttons></a></li>
-            <li><a routerLink="/distribucion-de-personal"><app-main-buttons label="Distribución de Personal" iconRoute="barra-lateral/distribucion.png"></app-main-buttons></a></li>
-            <li><a routerLink="/logout"><button>Cerrar Sesión<img src="barra-lateral/Logout.png" /></button></a></li>
+            <li><app-main-buttons routeIdentificator="/" label="Inicio" iconRoute="barra-lateral/hogar.png"></app-main-buttons></li>
+            <li><app-main-buttons routeIdentificator="/gestionar-entidades/empleados" label="Gestionar entidades" iconRoute="barra-lateral/entidades.png"></app-main-buttons></li>
+            <li><app-main-buttons routeIdentificator="/asistencia-y-turnos" label="Asistencia y Turnos" iconRoute="barra-lateral/asistencia.png"></app-main-buttons></li>
+            <li><app-main-buttons routeIdentificator="/reportes-y-credenciales" label="Reportes y credenciales" iconRoute="barra-lateral/reportes.png"></app-main-buttons></li>
+            <li><app-main-buttons routeIdentificator="/distribucion-de-personal" label="Distribución de Personal" iconRoute="barra-lateral/distribucion.png"></app-main-buttons></li>
+            <li><button routerLink="/logout">Cerrar Sesión<img src="barra-lateral/Logout.png" /></button></li>
         </ul>
     </nav>
     <img src="barra-lateral/Uni-logo.jpg" alt="Logo" class="logo" />

@@ -1,4 +1,4 @@
-button{
+.mainButton{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,13 +15,76 @@ button{
     border-radius: .8rem;
     
 }
-button:hover{
+.active{
+  color: #c50606;
+  font-weight: bolder;
+}
+.activeIcon{
+  filter: brightness(0) saturate(100%) invert(15%) sepia(75%) saturate(3126%) hue-rotate(346deg) brightness(117%) contrast(116%);
+}
+#desplegarButton:hover{
+    transform: scale(1.2);
+}
+.mainButton:hover{
     background-color: #fae3e0;
     transform: scale(1.1);
 }   
-button img{
+#buttonIcon{
     margin-top: -0.188rem;
     margin-right: .7rem;
     width: 1.2rem;
     height: 1.2rem;
+}
+
+.dropdown-container {
+    position: relative; /* Necesario para posicionar la lista */
+    display: inline-block;
+    transition: 1s;
+  }
+  
+  .dropdown-options {
+    position: absolute;
+    top: 100%; /* Coloca la lista debajo del botón */
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 12rem;
+    width: auto;
+    color: rgb(70, 69, 69);
+    padding: 0 1rem 0 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    background: white; /* Fondo blanco para la lista */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation:  fadeIn .5s ease;
+    overflow: hidden;
+  }
+  
+  .dropdown-options li {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 9px;
+  }
+  .dropdown-options li:hover {
+    transform: scale(1.05);
+    text-decoration: underline;/* Fondo al pasar el ratón */
+  }
+  
+
+/* Estilos para botones inactivos */
+button {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    height: 0;
+  }
+  to {
+    height: 12rem;
+  }
 }

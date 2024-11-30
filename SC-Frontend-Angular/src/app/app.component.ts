@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { BarraLateralComponent } from './MainComponents/barra-lateral/barra-lateral.component';
 import { EncabezadoComponent } from './MainComponents/encabezado/encabezado.component';
 
@@ -11,5 +11,6 @@ import { EncabezadoComponent } from './MainComponents/encabezado/encabezado.comp
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
   title = 'ng-front-CS';
 }

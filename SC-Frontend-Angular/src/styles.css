@@ -19,3 +19,11 @@ app-root{
     height: 100%;
     width: 100%;
 }
+a{
+    text-decoration: none;
+}
+app-index{
+    display: block;
+    height: 100%;
+    width: 100%;
+    }   

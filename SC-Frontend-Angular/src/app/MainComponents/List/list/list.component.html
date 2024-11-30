@@ -1,2 +1,4 @@
-<p>{{saludo}}</p>
-<app-table [data]="tableData"></app-table>
+<section>
+<app-search  (search)="onSearch($event)" [columnsToSearch]="columns"></app-search>
+<app-table [data]="tableData" [code]="code"></app-table>
+</section>

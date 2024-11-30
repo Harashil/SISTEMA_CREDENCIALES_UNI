@@ -1,12 +1,23 @@
-<div>
-    <nav class="indicador">
-      <a 
+<div class="container">
+  <nav class="indicador">
+    <section class="tabs">
+      <a
         *ngFor="let item of tabs"
         [routerLink]="item.path"
-        [ngClass]="{ 'active': activeTab === item.path }">
+        [ngClass]="{ active: activeTab === item.path }"
+      >
         {{ item.label }}
       </a>
-    </nav>
-    <router-outlet></router-outlet>
-  </div>
-  
+    </section>
+    <section class="at-buttons" *ngIf="mainRoute === 'asistencia-y-turnos'">
+      <button class="button asistencia" routerLink="gestion-de-asistencia">
+        <app-asistencia-button label="Gestion de asistencia"></app-asistencia-button>
+      </button>
+      <button class="button turnos" routerLink="gestion-de-actividades">
+        <app-asistencia-button label="Gestion de actividades"></app-asistencia-button>
+      </button>
+    </section>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,22 @@
+<section>
+  <div class="search-container">
+    <div class="filterBy">
+      <p>Filtrar por:</p>
+      <!-- Menú desplegable para seleccionar opciones -->
+      <select id="select1" [(ngModel)]="selectedOption" (change)="onOptionChange()">
+        <option *ngFor="let option of columnsToSearch" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </div>
+    <select id="xd" style="border: none;">
+      <option value="1">asc</option>
+      <option value="2">desc</option>
+    </select>
+    <!-- Campo de entrada con placeholder dinámico -->
+    <input type="text" placeholder="Buscar..." [(ngModel)]="searchText" />
+    <button>
+      <img src="/list/lupa.png" alt="Buscar" />
+    </button>
+  </div>
+</section>
